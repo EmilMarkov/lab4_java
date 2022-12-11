@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Transport>
+    <maxLoad>0.0</maxLoad>
+    <maxPassengerCount>0.0</maxPassengerCount>
+    <maxSpeed>0.0</maxSpeed>
+    <carsList>
+        <carItem id="kkk">
+            <carsList/>
+            <busesList/>
+            <motocyclesList/>
+            <trucksList/>
+            <brand>BMV</brand>
+            <model>huita</model>
+            <maxLoad>4.0</maxLoad>
+            <maxPassengerCount>1.0</maxPassengerCount>
+            <maxSpeed>120.0</maxSpeed>
+            <bodyType>p</bodyType>
+            <equipment>ass</equipment>
+            <isTrailer>false</isTrailer>
+            <trailer>
+                <maxLoad>0.0</maxLoad>
+            </trailer>
+        </carItem>
+    </carsList>
+    <busesList/>
+    <motocyclesList/>
+    <trucksList/>
+</Transport>
