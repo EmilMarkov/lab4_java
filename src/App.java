@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Properties;
 
+// Основной класс программы
 public class App {
     public static Logging errCore = new Logging();
     public static Model model = new Model();
@@ -19,15 +20,18 @@ public class App {
     public static void main(String[] args) {
         boolean isRunning = false; // true - app is running, false - app is stopped
 
+        // Точка запуска программы
         App app = new App();
         app.run(model, view, controller, prop, isRunning);
     }
 
+    // Метод при запуске программы
     public void run(Model model, View view, Controller controller, Properties prop, boolean isRunning) {
         isRunning = true;
 
         while (isRunning) {
             if (model.getGroup().equals(Model.Groups.developer.toString())) {
+                // Функция выбранная пользователем
                  int function = View.menu(View.Menus.developer);
 
                  switch (function) {
@@ -64,6 +68,7 @@ public class App {
                          System.out.println(Model.autotest);
                          break;
                      case 6:
+                         // Работа с файлом
                          PrintWriter writer = null;
                          try {
                              writer = new PrintWriter(model.getConfigFileName());
@@ -96,6 +101,7 @@ public class App {
                          }
                          break;
                      case 7:
+                         // Сохраняем и выходим
                          model.fromObjectToXML();
                          model.saveConfigFile(model.usersFile, model.usersProp);
                          model.saveConfigFile(model.configFile, model.configProp);
@@ -118,6 +124,7 @@ public class App {
                         Logging.log(this, "Transport was cleared!");
                         break;
                     case 4:
+                        // Работа с файлом
                         PrintWriter writer = null;
                         try {
                             writer = new PrintWriter(model.getConfigFileName());
@@ -150,6 +157,7 @@ public class App {
                         }
                         break;
                     case 5:
+                        // Сохраняем и выходим
                         model.fromObjectToXML();
                         model.saveConfigFile(model.usersFile, model.usersProp);
                         model.saveConfigFile(model.configFile, model.configProp);
